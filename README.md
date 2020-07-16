@@ -1,0 +1,1 @@
+This repo is for downloading all packages mentioned in [awesome-go](https://github.com/avelino/awesome-go) which can be used offline.

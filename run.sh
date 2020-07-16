@@ -3,6 +3,8 @@
 AwesomeGoURL4EN=https://raw.githubusercontent.com/avelino/awesome-go/master/README.md
 AwesomeGoURL4CN=https://raw.githubusercontent.com/jobbole/awesome-go-cn/master/README.md
 
+export PATH=$(go env GOPATH)/bin:$PATH
+
 function GetList() {
     curl -s $AwesomeGoURL4EN > AwesomeGo.en.md
     curl -s $AwesomeGoURL4CN > AwesomeGo.cn.md
@@ -26,12 +28,13 @@ function SetupMod(){
 
 function ZipPackage(){
     #go mod vendor
-    tar czf pkgs.tar.gz -C $(go env GOPATH)/pkg/mod/cache/ ./
+    tar czf golang-pkgs.tar.gz -C $(go env GOPATH)/pkg/mod/cache/ ./
 }
 
 function Commit(){
     git add AwesomeGo.en.md AwesomeGo.cn.md package.list.txt fake.go go.mod
     git commit -m "pull from awesome-go on $(date);"
+    rclone copy -P golang-pkgs.tar.gz remote:/golang-pkgs.tar.gz
 }
 
 $1

@@ -6,7 +6,7 @@ AwesomeGoURL4CN=https://raw.githubusercontent.com/jobbole/awesome-go-cn/master/R
 function GetList() {
     curl -s $AwesomeGoURL4EN > AwesomeGo.en.md
     curl -s $AwesomeGoURL4CN > AwesomeGo.cn.md
-    awk -F'\]\(' '/^### Contents/,/^# Resources/{if(/^\* \[.*\]\(https?:.*\)/) print $2}' AwesomeGo.en.md \
+    awk -F'\]\(' '/^### Contents/,/^# Resources/{if(/^[ \t]*\* \[.*\]\(https?:.*\)/) print $2}' AwesomeGo.en.md \
     | sed -e 's#/\?).*#"#' -e 's#^https\?://#\t_ "#' > package.list.txt   
 }
 
@@ -24,8 +24,8 @@ function SetupMod(){
     # todo: this might fail if the package name not match declared
 }
 
-function DownloadPackage(){
-    go mod vendor
+function ZipPackage(){
+    #go mod vendor
     tar czf pkgs.tar.gz -C $(go env GOPATH)/pkg/mod/cache/ ./
 }
 
@@ -34,7 +34,7 @@ function Commit(){
     git commit -m "pull from awesome-go on $(date);"
 }
 
-
-GetList
-SetupMod
-DownloadPackage
+$1
+# GetList
+# SetupMod
+# ZipPackage

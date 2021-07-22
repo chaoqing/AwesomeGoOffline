@@ -247,7 +247,7 @@ import (
 	_ "github.com/etcd-io/bbolt"
 	_ "github.com/iwanbk/bcache"
 	_ "github.com/allegro/bigcache"
-	_ "github.com/prologic/bitcask"
+	_ "git.mills.io/prologic/bitcask"
 	_ "github.com/tidwall/buntdb"
 	_ "github.com/akyoto/cache"
 	_ "github.com/muesli/cache2go"

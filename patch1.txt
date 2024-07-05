@@ -1,0 +1,45 @@
+  _ "github.com/labstack/gommon/color"
+  _ "github.com/hidevopsio/hiboot/pkg/app/cli"
+  _ "github.com/One-com/gone/jconf"
+  _ "git.mills.io/prologic/bitcask"
+  _ "github.com/gobuffalo/pop/soda"
+  _ "golang.yandex/hasql"
+  _ "gocql.github.io"
+  _ "cirello.io/dynamolock"
+  _ "cirello.io/pglock"
+  _ "resgate.io"
+  _ "blitiri.com.ar/p/chasquid"
+  _ "codeberg.org/anaseto/goal"
+  _ "gitlab.com/tozd/go/errors"
+  _ "code.pfad.fr/swift"
+  _ "pkg.go.dev/cirello.io/oversight"
+  _ "gioui.org"
+  _ "mattn.github.io/go-gtk"
+  _ "bitbucket.org/rj/goey" // Needs investigation for import path
+  _ "wails.io"
+  _ "periph.io"
+  _ "mhholt.github.io/json-to-go"
+  _ "json-to-proto.github.io" // Needs investigation for import path
+  _ "github.com/One-com/gone/log"
+  _ "github.com/happy-sdk/happy/pkg/strings/bexp"
+  _ "github.com/go-openapi"
+  _ "github.com/azr/generators/varhandler"
+  _ "eclipse.org/paho/clients/golang"
+  _ "gitea.com/xorm/xorm"
+  // golang.org/cmd/go and go.googlesource.com/vgo are meta-packages, not directly importable
+  _ "pkg.go.dev/golang.org/x/crypto/acme/autocert"
+  _ "nsq.io" // Needs investigation for import path
+  _ "www.gomponents.com" // Needs investigation for import path
+  _ "apitest.dev" // Needs investigation for import path
+  _ "labix.org/gocheck"
+  _ "github.com/labstack/gommon/bytes"
+  _ "git.iglou.eu/Production/go-yapla" // Needs investigation for import path
+  _ "gitlab.com/skilstak/code/go/uniq"
+  // aahframework.org, gobuffalo.io, confetti-framework.github.io lack clear import info
+  _ "pkg.go.dev/golang.org/x/tools/cmd/goimports"
+  // sourcegraph.com, github.com/dominikh/go-tools, plugins.jetbrains.com, marketplace.visualstudio.com are meta-resources, not packages
+  _ "xuri.me/toml-to-go"
+  _ "gotemplate.io" // Needs investigation for import path
+  // www.docker.com is a website, not a Go package
+  // Remaining URLs point to tools, services, or lack clear package structure
+
